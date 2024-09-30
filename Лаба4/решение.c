@@ -33,6 +33,7 @@ int main()
 	printf("%le", dr);
 	int fr2;
 	fr2 = (int)fr;
+	
 //1A
 	printf("\n\nЦелая часть:%d", fr2);
 	printf("\nДробная часть:%.2f", fr - fr2);
@@ -42,18 +43,24 @@ int main()
 //1V
 	double result;
 	result = 1.0/ir;
-	printf("\nДесятиное в виде 1/%d = %.2lf",ir, result);
+	printf("\nДесятичное, в виде 1/%d = %.2lf",ir, result);
 	//2
 
 	int a = 11;
 	int b = 3;
-	int x;
-	float y;
-	double z;
-	x = a / b;
-	y = a / b;
-	z = a / b;
-	printf("\n%d\n%f\n%lf", x, y, z);
+
+	printf("\nЦелочисленное деление:%d\nДеление преобразованное в вещ-ное число:%f\nДеление с преобразованием в целое десят-ное число:%lf", (int)a/b,(float)a/b,(double)a/b);
+	//Потеряна точность
+
+	//3
+	int N;
+
+	printf("\nВведите целое трезначное число:\n");
+
+	scanf_s("%d", &N);
+
+	printf("\nПоследняя цифра числа N = %d\nПервая цифра числа N = %d\nСумма цифр числа = %d\nЧисло наоборот = %d%d%d", N % 10,N / 100, (N%10)+(N/10)%10+(N/100), N%10,(N/10)%10, N/100);
+
 	return 0;
 
 }
